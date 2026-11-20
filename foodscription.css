@@ -151,7 +151,8 @@ img {
     display: -ms-flexbox;
     display: flex;
     max-height: 500vh;
-    height: 400px;
+    height: auto;
+    min-height: 400px;
     margin-bottom: 1rem;
     padding-bottom: 5rem;
     -webkit-box-pack: center;
@@ -192,7 +193,7 @@ img {
 }
 
 .project-title {
-    font-size: 6em;
+    font-size: clamp(2rem, 10vw, 6em);
     line-height: 1.125em;
 }
 
@@ -736,4 +737,133 @@ h2 {
 .next-steps-text {
     color:white;
     margin-top: -1%;
+}
+
+
+/* ------------------------------------------------------------------
+   Responsive layout
+   ------------------------------------------------------------------ */
+
+h1 { overflow-wrap: break-word; }
+
+/* the embedded Figma prototype scales with the page instead of
+   being locked to 1000 x 600 */
+.prototype iframe {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    aspect-ratio: 5 / 3;
+}
+
+/* give the text columns breathing room once the window is
+   narrower than their 600px max width */
+@media (max-width: 700px) {
+    .details,
+    .introduction,
+    .persona,
+    .persona-title,
+    .title,
+    .card-wrapper,
+    .planning-title,
+    .planning,
+    .user-flow,
+    .flow-title,
+    .flowchart-pdf,
+    .flow-img,
+    .wireframing,
+    .wireframing-title,
+    .prototype-title,
+    .prototype-text,
+    .prototype,
+    .conclusion,
+    .conclusion-title {
+        box-sizing: border-box;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .card {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 16px;
+    }
+}
+
+/* phones */
+@media (max-width: 600px) {
+    /* nav wraps instead of running off the screen */
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    li {
+        float: none;
+        padding: 0;
+    }
+
+    li a {
+        float: none;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .hero-image {
+        padding-bottom: 3rem;
+    }
+
+    .hero-text {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 2rem;
+    }
+
+    .project-subtitle {
+        font-size: 1.1rem;
+        line-height: 1.3;
+    }
+
+    /* the Problem / Length / Client rows stack label over value */
+    .row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .attribute {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    .title,
+    .persona-title,
+    .conclusion-title {
+        font-size: 36px;
+    }
+
+    /* section headings that sit inside a 24px wrapper (h1 = 2em) */
+    .planning-title,
+    .flow-title,
+    .wireframing-title,
+    .prototype-title {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .action-header,
+    .rationale-header {
+        font-size: 20px;
+    }
+
+    #btn-back-to-top {
+        bottom: 20px;
+        right: 16px;
+        height: 44px;
+        width: 44px;
+    }
 }

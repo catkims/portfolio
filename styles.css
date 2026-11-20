@@ -148,7 +148,8 @@ li a:hover {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: clamp(1.75rem, 7vw, 50px);
+    overflow-wrap: break-word;
     text-align: left;
     font-weight: 600;
 }
@@ -223,7 +224,7 @@ span {
 .title {
     margin-bottom: -4%;
     z-index: 900;
-    font-size: 150px;
+    font-size: clamp(3.25rem, 14vw, 150px);
     font-weight: 900;
 }
 
@@ -265,7 +266,7 @@ span {
     margin-bottom: 10%;
     width: 100%;
     max-width: 1200px;
-    height: 600px;
+    aspect-ratio: 2 / 1;
     background-size: cover;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 15px 35px 0 rgba(0, 0, 0, 0.05);
     background-image: url(images/Untitled.svg);
@@ -305,7 +306,7 @@ span {
     display: flex;
     width: 100%;
     max-width: 1200px;
-    height: 600px;
+    aspect-ratio: 2 / 1;
     background-size: cover;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1), 0 15px 35px 0 rgba(0, 0, 0, 0.05);
     background-image: url(images/amazon.svg);
@@ -327,7 +328,7 @@ span {
     margin-bottom: 10%;
     width: 50%;
     max-width: 600px;
-    height: 600px;
+    aspect-ratio: 1 / 1;
     background-size: cover;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1), 0 15px 35px 0 rgba(0, 0, 0, 0.05);
     background-image: url(images/qualcomm.svg);
@@ -349,7 +350,7 @@ span {
     margin-bottom: 10%;
     width: 50%;
     max-width: 600px;
-    height: 600px;
+    aspect-ratio: 1 / 1;
     background-size: cover;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1), 0 15px 35px 0 rgba(0, 0, 0, 0.05);
     background-image: url(images/um.svg);
@@ -469,6 +470,7 @@ span {
 }
 
 .links {
+    box-sizing: border-box;
     display: flex;
     width: 100%;
     padding-top: 20%;
@@ -543,4 +545,112 @@ span {
 
 .github:not(:hover) { 
     transition: all .2s ease-in-out;
+}
+
+
+/* ------------------------------------------------------------------
+   Responsive layout
+   ------------------------------------------------------------------ */
+
+img { max-width: 100%; }
+
+/* keep the cards from touching the screen edge once the window is
+   narrower than the content */
+@media (max-width: 1240px) {
+    #design, #work, #contact {
+        box-sizing: border-box;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* tablets and below: stack the contact card */
+@media (max-width: 768px) {
+    .big-article {
+        height: auto;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+
+    .big-article-image-wrapper {
+        width: 100%;
+        min-height: 320px;
+        border-radius: 8px 8px 0 0;
+        background-position: 50% 25%;
+    }
+
+    .project-text-wrapper {
+        flex: none;
+        height: auto;
+        padding: 24px 20px;
+    }
+
+    .project-tn-sub {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .links {
+        padding: 24px 0 8px;
+        justify-content: flex-start;
+    }
+}
+
+/* phones */
+@media (max-width: 600px) {
+    /* nav wraps instead of running off the screen */
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    li {
+        float: none;
+        padding: 0;
+    }
+
+    li a {
+        float: none;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    /* hero grows with its text instead of being clipped at 300px */
+    #hero-image {
+        box-sizing: border-box;
+        height: auto;
+        max-height: none;
+        margin-top: 2%;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 8%;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    /* the two work cards stack */
+    .work-2,
+    .work-3 {
+        width: 100%;
+        max-width: none;
+    }
+
+    .work-1 {
+        margin-bottom: 6%;
+    }
+
+    .design-1 {
+        margin-bottom: 8%;
+    }
+
+    #btn-back-to-top {
+        bottom: 20px;
+        right: 16px;
+        height: 44px;
+        width: 44px;
+    }
 }
