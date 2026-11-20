@@ -1,84 +1,120 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-        <link rel="icon" href="images/name_icon.png">
-        <title> Home </title>
-    </head>
-    <body>
-      <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#121118">
+    <meta name="description" content="Catherine Kim is an aspiring product designer and software engineer based in Ann Arbor, MI.">
+    <title>Catherine Kim | Product designer &amp; software engineer</title>
+    <link rel="icon" href="images/name_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+    <button type="button" id="btn-back-to-top" aria-label="Back to top">
         <i class="arrow up"></i>
-      </button>
-        <!--nav bar-->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#design">Design</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="files/Catherine Kim, Resume.pdf" target = "blank" class="resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div id="hero-image">
-            <div class="hero-text">
-                <h1 class = "top-line">Hi, I am
-                    <a href="#contact" class="name">Catherine Kim</a>
-                </h1>
-                <h1>I like to 
-                  <a href="#design" class="design">design</a> &
-                  <a href="#work" class="program">program</a>.
-                </h1>
-                <p class = "hero-subtitle">
-                  I am an aspiring product designer and software engineer based in Ann Arbor, MI. 
-                  I am passionate about designing products to improve quality of life, and I love learning new things.
-                </p>
+    </button>
+
+    <header class="bar">
+        <div class="wrap bar-inner">
+            <a class="brand" href="#top">
+                <strong>Catherine Kim</strong>
+                <span>Product designer &amp; software engineer</span>
+            </a>
+            <nav aria-label="Main">
+                <a href="#design">Design</a>
+                <a href="#work">Work</a>
+                <a href="#contact">Contact</a>
+                <a class="btn small" href="files/Catherine Kim, Resume.pdf" target="_blank" rel="noopener">Resume</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero wrap">
+            <h1>
+                <span class="hello">Hi, I am Catherine Kim.</span>
+                I like to <a href="#design" class="design">design</a> &amp;
+                <a href="#work" class="program">program</a>.
+            </h1>
+            <p class="lede">
+                I am an aspiring product designer and software engineer based in Ann Arbor, MI.
+                I am passionate about designing products to improve quality of life, and I love learning new things.
+            </p>
+            <div class="actions">
+                <a class="btn" href="#design">View projects</a>
+                <a class="btn ghost" href="files/Catherine Kim, Resume.pdf" target="_blank" rel="noopener">Download resume</a>
             </div>
-        </div>
-        <div id="design">
-          <h1 class="title">Design.</h1>
-          <a href="foodscription.html" class="design-1"></a>
-        </div>
-        <div id="work">
-          <h1 class="title">Work.</h1>
-          <a href="https://aws.amazon.com/rds/aurora/" class="work-1"></a>
-          <a href="https://www.qualcomm.com/" class="work-2"></a>
-          <a href="https://eecs485.org/" class="work-3"></a>
-        </div>
-        <div id="contact" class="site-content home">
-          <h1 class="title about me">Say hi!</h1>
-          <div class="big-article about-me">
-            <div class="big-article-image-wrapper about-me"></div>
-              <div class="project-text-wrapper">
-                <div class="big-article-title-wrapper">
-                  <p class="project-tn-sub">Hi, my name is Catherine! I am currently a fourth year student double majoring in 
-                    computer science and cognitive science at the University of Michigan. <br><br>I am passionate about 
-                    programming and in my spare time, I enjoy toying with UI/UX design.
-                  </p>
-                  <div class = "links">
-                    <div class="email">
-                      <a href="mailto:catkims@umich.edu">
-                          <img src="images/email.png" alt="Email" style="width:42px;height:42px;">
-                      </a>
-                  </div>
-                  <div class="linkedin">
-                      <a href="https://www.linkedin.com/in/catkims/" target="_blank">
-                          <img src="images/linkedin.png" alt="LinkedIn" style="width:42px;height:42px;">
-                      </a>
-                  </div>
-                  <div class="github">
-                      <a href="https://github.com/catkims" target="_blank">
-                          <img src="images/github.png" alt="Github" style="width:42px;height:42px">
-                      </a>
-                  </div>
-                  </div>
+
+            <dl class="facts">
+                <div><dt>Based in</dt><dd>Ann Arbor, MI</dd></div>
+                <div><dt>School</dt><dd>University of Michigan</dd></div>
+                <div><dt>Majors</dt><dd>Computer Science &amp; Cognitive Science</dd></div>
+                <div><dt>Year</dt><dd>Fourth year</dd></div>
+            </dl>
+        </section>
+
+        <section id="design" class="wrap section">
+            <h2>Design.</h2>
+            <a class="project" href="foodscription.html">
+                <div class="shot wide"><img src="images/Untitled.svg" alt="Foodscription app screens" loading="lazy"></div>
+                <div class="project-info">
+                    <div>
+                        <h3>Foodscription</h3>
+                        <p>Have your favorite meals right at your door.</p>
+                    </div>
+                    <p class="meta">Product design for college students, 1 month</p>
+                    <ul class="tags">
+                        <li>Figma</li><li>User flows</li><li>Prototyping</li><li>Pivotal Tracker</li>
+                    </ul>
                 </div>
-              </div>
+            </a>
+        </section>
+
+        <section id="work" class="wrap section">
+            <h2>Work.</h2>
+            <div class="work-grid">
+                <a class="project span-2" href="https://aws.amazon.com/rds/aurora/" target="_blank" rel="noopener">
+                    <div class="shot wide"><img src="images/amazon.svg" alt="Amazon Aurora" loading="lazy"></div>
+                    <div class="project-info"><h3>Amazon Aurora</h3></div>
+                </a>
+                <a class="project" href="https://www.qualcomm.com/" target="_blank" rel="noopener">
+                    <div class="shot square"><img src="images/qualcomm.svg" alt="Qualcomm" loading="lazy"></div>
+                    <div class="project-info"><h3>Qualcomm</h3></div>
+                </a>
+                <a class="project" href="https://eecs485.org/" target="_blank" rel="noopener">
+                    <div class="shot square"><img src="images/um.svg" alt="EECS 485 at the University of Michigan" loading="lazy"></div>
+                    <div class="project-info"><h3>EECS 485</h3></div>
+                </a>
             </div>
-          </div>
-        <script src="script.js"></script>
-    </body>
+        </section>
+
+        <section id="contact" class="wrap section">
+            <h2>Say hi!</h2>
+            <div class="contact">
+                <img class="portrait" src="images/IMG_5253_Facetune_13-07-2021-14-14-58.jpg" alt="Catherine Kim" loading="lazy">
+                <div class="contact-text">
+                    <p>
+                        Hi, my name is Catherine! I am currently a fourth year student double majoring in
+                        computer science and cognitive science at the University of Michigan.
+                    </p>
+                    <p>
+                        I am passionate about programming and in my spare time, I enjoy toying with UI/UX design.
+                    </p>
+                    <ul class="channels">
+                        <li><a href="mailto:catkims@umich.edu"><span>Email</span>catkims@umich.edu</a></li>
+                        <li><a href="https://www.linkedin.com/in/catkims/" target="_blank" rel="noopener"><span>LinkedIn</span>linkedin.com/in/catkims</a></li>
+                        <li><a href="https://github.com/catkims" target="_blank" rel="noopener"><span>GitHub</span>github.com/catkims</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="wrap foot">&copy; 2026 Catherine Kim</footer>
+    <script src="script.js"></script>
+</body>
 </html>
