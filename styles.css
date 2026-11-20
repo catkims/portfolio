@@ -104,16 +104,6 @@ h1 a:hover { text-decoration: underline; text-decoration-thickness: 0.06em; text
 }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 
-.facts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 0;
-    margin: clamp(48px, 8vw, 96px) 0 0;
-    border-block: 1px solid var(--line);
-}
-.facts > div { padding: 20px 20px 20px 0; }
-.facts dt { font-size: 0.8rem; color: var(--muted); }
-.facts dd { margin: 4px 0 0; font-weight: 600; }
 
 /* ---------- sections ---------- */
 .section { padding-block: clamp(56px, 9vw, 112px) 0; }
@@ -141,19 +131,16 @@ h2 {
 }
 .project:hover .shot { border-color: var(--blue); }
 
-.project-info {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 8px 32px;
-    padding-top: 16px;
-}
+.project-info { padding-top: 16px; }
 .project-info h3 { margin: 0; font-size: 1.25rem; font-weight: 600; }
 .project-info p { margin: 4px 0 0; color: var(--muted); }
-.project-info .meta { margin: 0; font-size: 0.9rem; }
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; flex-basis: 100%; }
+.project-info .meta { font-size: 0.9rem; }
+.project-info .desc { max-width: 40em; margin-top: 10px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
 .tags li {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     font-size: 0.8rem;
     padding: 4px 12px;
     border: 1px solid var(--line);
@@ -220,6 +207,77 @@ h2 {
     .work-grid { grid-template-columns: 1fr; }
     .contact { grid-template-columns: 1fr; }
     .portrait { aspect-ratio: 1 / 1; }
-    .facts > div { padding-right: 12px; }
     #btn-back-to-top { right: 16px; bottom: 16px; }
 }
+
+.tags img { width: 20px; height: 20px; padding: 2px; border-radius: 4px; background: var(--text); }
+.project-info .meta + .meta { margin-top: 0; }
+
+/* ---------- skills ---------- */
+.skill-group + .skill-group { margin-top: 40px; }
+.skill-group h3 {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.skill-group h3 span { font-size: 0.85rem; font-weight: 400; color: var(--muted); }
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.skills li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px 10px 10px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    font-size: 0.95rem;
+}
+.tile {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+.tile img { width: 24px; height: 24px; }
+@media (max-width: 720px) {
+    .skills { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+}
+
+/* card with no content yet */
+.project.empty .shot { border-style: dashed; }
+
+/* ---------- email form ---------- */
+.mail { display: grid; gap: 8px; }
+.mail label { margin-top: 8px; font-size: 0.85rem; font-weight: 600; }
+.mail input,
+.mail textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+}
+.mail textarea { min-height: 140px; resize: vertical; }
+.mail input:focus-visible,
+.mail textarea:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; border-color: transparent; }
+.mail .btn { justify-self: start; margin-top: 16px; font-family: inherit; cursor: pointer; }
+.mail .note { margin: 4px 0 0; font-size: 0.85rem; color: var(--muted); }

@@ -25,8 +25,9 @@
                 <span>Product designer &amp; software engineer</span>
             </a>
             <nav aria-label="Main">
-                <a href="#design">Design</a>
                 <a href="#work">Work</a>
+                <a href="#design">Design</a>
+                <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
                 <a class="btn small" href="files/Catherine Kim, Resume.pdf" target="_blank" rel="noopener">Resume</a>
             </nav>
@@ -45,33 +46,10 @@
                 I am passionate about designing products to improve quality of life, and I love learning new things.
             </p>
             <div class="actions">
-                <a class="btn" href="#design">View projects</a>
+                <a class="btn" href="#work">View projects</a>
                 <a class="btn ghost" href="files/Catherine Kim, Resume.pdf" target="_blank" rel="noopener">Download resume</a>
             </div>
 
-            <dl class="facts">
-                <div><dt>Based in</dt><dd>Ann Arbor, MI</dd></div>
-                <div><dt>School</dt><dd>University of Michigan</dd></div>
-                <div><dt>Majors</dt><dd>Computer Science &amp; Cognitive Science</dd></div>
-                <div><dt>Year</dt><dd>Fourth year</dd></div>
-            </dl>
-        </section>
-
-        <section id="design" class="wrap section">
-            <h2>Design.</h2>
-            <a class="project" href="foodscription.html">
-                <div class="shot wide"><img src="images/Untitled.svg" alt="Foodscription app screens" loading="lazy"></div>
-                <div class="project-info">
-                    <div>
-                        <h3>Foodscription</h3>
-                        <p>Have your favorite meals right at your door.</p>
-                    </div>
-                    <p class="meta">Product design for college students, 1 month</p>
-                    <ul class="tags">
-                        <li>Figma</li><li>User flows</li><li>Prototyping</li><li>Pivotal Tracker</li>
-                    </ul>
-                </div>
-            </a>
         </section>
 
         <section id="work" class="wrap section">
@@ -79,16 +57,113 @@
             <div class="work-grid">
                 <a class="project span-2" href="https://aws.amazon.com/rds/aurora/" target="_blank" rel="noopener">
                     <div class="shot wide"><img src="images/amazon.svg" alt="Amazon Aurora" loading="lazy"></div>
-                    <div class="project-info"><h3>Amazon Aurora</h3></div>
+                    <div class="project-info">
+                        <h3>AWS Aurora</h3>
+                        <p class="meta">Software Engineering Intern, Amazon Web Services</p>
+                        <p class="meta">Seattle, WA, May 2023 to Aug 2023</p>
+                        <p class="desc">Built a Java framework for a task scheduler that schedules garbage collection for customers' data backups. Wrote SQL queries against DynamoDB schemas to check for existing tasks. Improved garbage collection efficiency by 5% and cut the backup team's S3 footprint by 5%.</p>
+                        <ul class="tags" aria-label="Tools">
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg" alt="" width="20" height="20" onerror="this.remove()">Java</li>
+                        <li>SQL</li>
+                        <li>AWS DynamoDB</li>
+                        <li>AWS S3</li>
+                        </ul>
+                    </div>
                 </a>
+                <article class="project span-2 empty">
+                    <div class="shot wide"></div>
+                    <div class="project-info">
+                        <h3>AWS Aurora DSQL</h3>
+                        <!-- Add role, dates, description and tools here, same as the other cards -->
+                    </div>
+                </article>
                 <a class="project" href="https://www.qualcomm.com/" target="_blank" rel="noopener">
                     <div class="shot square"><img src="images/qualcomm.svg" alt="Qualcomm" loading="lazy"></div>
-                    <div class="project-info"><h3>Qualcomm</h3></div>
+                    <div class="project-info">
+                        <h3>Qualcomm</h3>
+                        <p class="meta">Embedded Software Engineering Intern, Camera team</p>
+                        <p class="meta">San Diego, CA, May 2022 to Aug 2022</p>
+                        <p class="desc">Simplified camera testing by building a VS Code extension that talks to the HAL layer, so teams can run faster, more unified tests. Also built a JSON use case builder that turns user input into nested JSON files for testing.</p>
+                        <ul class="tags" aria-label="Tools">
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg" alt="" width="20" height="20" onerror="this.remove()">TypeScript</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" alt="" width="20" height="20" onerror="this.remove()">JavaScript</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt="" width="20" height="20" onerror="this.remove()">HTML</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg" alt="" width="20" height="20" onerror="this.remove()">CSS</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vscode/vscode-original.svg" alt="" width="20" height="20" onerror="this.remove()">VS Code</li>
+                        </ul>
+                    </div>
                 </a>
                 <a class="project" href="https://eecs485.org/" target="_blank" rel="noopener">
                     <div class="shot square"><img src="images/um.svg" alt="EECS 485 at the University of Michigan" loading="lazy"></div>
-                    <div class="project-info"><h3>EECS 485</h3></div>
+                    <div class="project-info">
+                        <h3>EECS 485, Web Systems</h3>
+                        <p class="meta">Teaching Assistant, University of Michigan</p>
+                        <p class="meta">Ann Arbor, MI, Jan 2023 to Apr 2023</p>
+                        <p class="desc">Led office hours and lab instruction for a course of 500 students on full-stack development and distributed systems like MapReduce. Wrote exam questions, slides and programming demos.</p>
+                        <ul class="tags" aria-label="Tools">
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" width="20" height="20" onerror="this.remove()">Python</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/flask/flask-original.svg" alt="" width="20" height="20" onerror="this.remove()">Flask</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" alt="" width="20" height="20" onerror="this.remove()">React</li>
+                        <li>SQL</li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt="" width="20" height="20" onerror="this.remove()">HTML</li>
+                        </ul>
+                    </div>
                 </a>
+            </div>
+        </section>
+
+        <section id="design" class="wrap section">
+            <h2>Design.</h2>
+            <a class="project" href="foodscription.html">
+                <div class="shot wide"><img src="images/Untitled.svg" alt="Foodscription app screens" loading="lazy"></div>
+                <div class="project-info">
+                    <h3>Foodscription</h3>
+                    <p class="meta">Product design, 1 month</p>
+                    <p class="desc">A subscription service for the foods college students eat regularly. Set up a plan once and meals are delivered to your door or ready for pickup, with no reordering.</p>
+                    <ul class="tags" aria-label="Tools">
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/figma/figma-original.svg" alt="" width="20" height="20" onerror="this.remove()">Figma</li>
+                        <li>Pivotal Tracker</li>
+                        <li>User flows</li>
+                        <li>Prototyping</li>
+                    </ul>
+                </div>
+            </a>
+        </section>
+
+        <section id="skills" class="wrap section">
+            <h2>Skills.</h2>
+            <div class="skill-group">
+                <h3>Languages <span>9</span></h3>
+                <ul class="skills">
+                <li><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cplusplus/cplusplus-original.svg" alt="" width="24" height="24" data-t="C+" onerror="this.parentNode.textContent=this.dataset.t"></span>C++</li>
+                <li><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/c/c-original.svg" alt="" width="24" height="24" data-t="C" onerror="this.parentNode.textContent=this.dataset.t"></span>C</li>
+                <li><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" width="24" height="24" data-t="Py" onerror="this.parentNode.textContent=this.dataset.t"></span>Python</li>
+                <li><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" alt="" width="24" height="24" data-t="Ja" onerror="this.parentNode.textContent=this.dataset.t"></span>JavaScript</li>
+                <li><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg" alt="" width="24" height="24" data-t="Ty" onerror="this.parentNode.textContent=this.dataset.t"></span>TypeScript</li>
+                <li><span class="tile">SQL</span>SQL</li>
+                <li><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt="" width="24" height="24" data-t="HT" onerror="this.parentNode.textContent=this.dataset.t"></span>HTML</li>
+                <li><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg" alt="" width="24" height="24" data-t="CS" onerror="this.parentNode.textContent=this.dataset.t"></span>CSS</li>
+                <li><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/java/java-original.svg" alt="" width="24" height="24" data-t="Ja" onerror="this.parentNode.textContent=this.dataset.t"></span>Java</li>
+                </ul>
+            </div>
+            <div class="skill-group">
+                <h3>Frameworks <span>3</span></h3>
+                <ul class="skills">
+                <li><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" alt="" width="24" height="24" data-t="Re" onerror="this.parentNode.textContent=this.dataset.t"></span>React.js</li>
+                <li><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vuejs/vuejs-original.svg" alt="" width="24" height="24" data-t="Vu" onerror="this.parentNode.textContent=this.dataset.t"></span>Vue.js</li>
+                <li><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/flask/flask-original.svg" alt="" width="24" height="24" data-t="Fl" onerror="this.parentNode.textContent=this.dataset.t"></span>Flask</li>
+                </ul>
+            </div>
+            <div class="skill-group">
+                <h3>Technologies <span>6</span></h3>
+                <ul class="skills">
+                <li><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/linux/linux-original.svg" alt="" width="24" height="24" data-t="Li" onerror="this.parentNode.textContent=this.dataset.t"></span>Linux</li>
+                <li><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" width="24" height="24" data-t="Gi" onerror="this.parentNode.textContent=this.dataset.t"></span>Git</li>
+                <li><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vscode/vscode-original.svg" alt="" width="24" height="24" data-t="VS" onerror="this.parentNode.textContent=this.dataset.t"></span>VS Code</li>
+                <li><span class="tile"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/latex/latex-original.svg" alt="" width="24" height="24" data-t="La" onerror="this.parentNode.textContent=this.dataset.t"></span>LaTeX</li>
+                <li><span class="tile">DB</span>AWS DynamoDB</li>
+                <li><span class="tile">EC2</span>AWS EC2</li>
+                </ul>
             </div>
         </section>
 
@@ -97,13 +172,19 @@
             <div class="contact">
                 <img class="portrait" src="images/IMG_5253_Facetune_13-07-2021-14-14-58.jpg" alt="Catherine Kim" loading="lazy">
                 <div class="contact-text">
-                    <p>
-                        Hi, my name is Catherine! I am currently a fourth year student double majoring in
-                        computer science and cognitive science at the University of Michigan.
-                    </p>
-                    <p>
-                        I am passionate about programming and in my spare time, I enjoy toying with UI/UX design.
-                    </p>
+                    <form class="mail" id="mail-form">
+                        <label for="m-name">Your name</label>
+                        <input id="m-name" name="name" type="text" autocomplete="name" required>
+
+                        <label for="m-email">Your email</label>
+                        <input id="m-email" name="email" type="email" autocomplete="email" required>
+
+                        <label for="m-msg">Your message</label>
+                        <textarea id="m-msg" name="message" rows="5" required></textarea>
+
+                        <button type="submit" class="btn">Send</button>
+                        <p class="note" id="mail-note" role="status">This opens your email app with the message filled in.</p>
+                    </form>
                     <ul class="channels">
                         <li><a href="mailto:catkims@umich.edu"><span>Email</span>catkims@umich.edu</a></li>
                         <li><a href="https://www.linkedin.com/in/catkims/" target="_blank" rel="noopener"><span>LinkedIn</span>linkedin.com/in/catkims</a></li>
@@ -116,5 +197,18 @@
 
     <footer class="wrap foot">&copy; 2026 Catherine Kim</footer>
     <script src="script.js"></script>
+    <script>
+        document.getElementById("mail-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            var f = e.target;
+            var name = f.name.value.trim(), email = f.email.value.trim(), msg = f.message.value.trim();
+            var subject = "Hello from " + name;
+            var body = msg + "\n\n" + name + "\n" + email;
+            window.location.href = "mailto:catkims@umich.edu?subject=" + encodeURIComponent(subject) +
+                "&body=" + encodeURIComponent(body);
+            document.getElementById("mail-note").textContent =
+                "If your email app didn't open, write to catkims@umich.edu directly.";
+        });
+    </script>
 </body>
 </html>
